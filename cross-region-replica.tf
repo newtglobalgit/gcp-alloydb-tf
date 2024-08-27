@@ -2,7 +2,7 @@ module "alloydb_mumbai" {
   source  = "GoogleCloudPlatform/alloy-db/google"
   version = "~> 3.0"
 
-  #primary_cluster_name = module.alloydb_delhi.cluster_name ## Comment this line to promote this cluster as primary cluster
+  primary_cluster_name = module.alloydb_delhi.cluster_name ## Comment this line to promote this cluster as primary cluster
 
   cluster_id       = "cluster-${var.region_mumbai}-psc"
   cluster_location = var.region_mumbai
